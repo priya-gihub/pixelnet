@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# Data (Kepler/TESS pixel downloads - large, regenerable)
+data/
+*.npz
+*.npy
+*.fits
+
+# Model weights / checkpoints (binary, regenerable)
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Run outputs (regenerable)
+logs/
+results/
+figures/
+tables/
+paper/
+*.log
+
+# Local caches / OS
+.lightkurve/
+astropy_cache/
+.cache/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
