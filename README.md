@@ -183,8 +183,8 @@ have silently degraded the published numbers:
   the binding constraint; reaching the ~0.98 accuracy implied by earlier drafts would require
   millions of targets. The multi-quarter / multi-sector ingestion needed to make that claim is
   future work and is deliberately not simulated.
-- **Ablation ordering.** The fused `pixel_physics` variant (ROC-AUC 0.6709) now beats both
-  single-branch variants (`physics_only` 0.6487, `pixel_only` 0.6133), which supports the fusion
+- **Ablation ordering.** The fused `pixel_physics` variant now beats both
+  single-branch variants (`physics_only` & `pixel_only` ), which supports the fusion
   claim. Note this was *not* true before the `transit_depth`/`snr` bug was fixed — the duplicated
   feature had been propping up the physics-only branch — so any ablation table from before that fix
   is not comparable and should be regenerated.
