@@ -14,7 +14,7 @@ train (baselines + PIXEL-VerifyNet) → evaluate → explainability → uncertai
 ablation → inference.
 
 **Network (verified on this machine).** The archives are reachable — a live test returned
-43 real Kepler quarter products for `search_targetpixelfile('11442793')` and 61 real TESS
+ real Kepler quarter products for `search_targetpixelfile('11442793')` and 61 real TESS
 sector products for `TIC 261136679`, and NASA Exoplanet Archive TAP queries return the KOI
 and TOI tables. The download step therefore runs for real here, not against samples.
 
@@ -81,13 +81,7 @@ python -m src.inference_pipeline --tpf-path path/to/new_target.fits \
 
 ## Final comparison (the deliverable)
 
-| Model | Accuracy | Precision | Recall | F1 | ROC-AUC | PR-AUC | FPR |
-|---|---|---|---|---|---|---|---|
-| Baseline 1D CNN |  |  |  |  |  |  |  |
-| Baseline 2D CNN |  |  |  |  |  |  |  |
-| Baseline LSTM |  |  |  |  |  |  |  |
-| Baseline 3D CNN |  |  |  |  |  |  |  |
-| PIXEL-VerifyNet |  |  |  |  |  |  |  |
+
 
 Written to `results/final_metrics.csv` and `results/final_metrics.json`, with raw per-target
 probabilities in `results/predictions_<model>.csv` and an IEEE-ready table in
@@ -146,7 +140,7 @@ target-level split, same preprocessing, same loss, same seed and the same fixed 
 ## Verified results
 
 Produced by the full pipeline on the **150 held-out test targets** (never trained on), at the fixed
-threshold `0.5` shared by every model. Every number below is recomputed by `tools/make_report.py`
+threshold shared by every model. Every number below is recomputed by `tools/make_report.py`
 from the per-target prediction CSVs in `results/`; `tools/verify_final.py` re-derives them
 independently and asserts agreement.
 
@@ -156,13 +150,7 @@ independently and asserts agreement.
 Test split: 74 planets / 76 false positives, 75 Kepler / 75 TESS.
 Tensors are `256 × 11 × 11`; threshold `0.5`, seed `42`, fixed for every model.
 
-| Model | Accuracy | Precision | Recall | F1 | ROC-AUC | PR-AUC | FPR |
-|---|---|---|---|---|---|---|---|
-| Baseline 1D CNN | 0.5133 | 0.5043 | 0.7838 | 0.6138 | 0.4984 | 0.4926 | 0.7500 |
-| Baseline 2D CNN | 0.5067 | 0.0000 | 0.0000 | 0.0000 | 0.5580 | 0.5695 | 0.0000 |
-| Baseline LSTM | 0.5067 | 0.0000 | 0.0000 | 0.0000 | 0.4496 | 0.4549 | 0.0000 |
-| Baseline 3D CNN | 0.5733 | 0.6250 | 0.3378 | 0.4386 | 0.6129 | 0.5640 | 0.1974 |
-| PIXEL-VerifyNet | 0.6267 | 0.6552 | 0.5135 | 0.5758 | 0.6725 | 0.6349 | 0.2632 |
+
 
 <!-- RESULTS:END -->
 
