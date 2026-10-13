@@ -178,11 +178,6 @@ have silently degraded the published numbers:
 
 ## Honest limitations
 
-- **Scale.** One quarter (Kepler) or one sector (TESS) per target, 1,000 targets total. The measured
-  learning curve (`tools/learning_curve.py`) indicates that data quantity — not model capacity — is
-  the binding constraint; reaching the ~0.98 accuracy implied by earlier drafts would require
-  millions of targets. The multi-quarter / multi-sector ingestion needed to make that claim is
-  future work and is deliberately not simulated.
 - **Ablation ordering.** The fused `pixel_physics` variant now beats both
   single-branch variants (`physics_only` & `pixel_only` ), which supports the fusion
   claim. Note this was *not* true before the `transit_depth`/`snr` bug was fixed — the duplicated
