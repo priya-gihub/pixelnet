@@ -86,7 +86,7 @@ python -m src.inference_pipeline --tpf-path path/to/new_target.fits \
 Written to `results/final_metrics.csv` and `results/final_metrics.json`, with raw per-target
 probabilities in `results/predictions_<model>.csv` and an IEEE-ready table in
 `tables/final_model_comparison.csv`. All five models share one protocol: same targets, same
-target-level split, same preprocessing, same loss, same seed and the same fixed threshold (0.5).
+target-level split, same preprocessing, same loss, same seed and the same fixed threshold.
 
 ## Directory Layout
 
