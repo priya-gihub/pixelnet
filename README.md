@@ -174,7 +174,7 @@ have silently degraded the published numbers:
 - `src/inference_pipeline.py` rebuilt the tensor without the catalog ephemeris, so single-target
   inference folded on a nominal axis and reported a NaN physics vector. `tools/check_inference_consistency.py`
   replays the inference path on real dataset rows and asserts it reproduces the stored tensors,
-  masks and features exactly.
+  masks and features exactly. 
 
 ## Honest limitations
 
